@@ -1,0 +1,18 @@
+{
+    "id": 84842316,
+    "category": {
+        "id": 1,
+        "name": "coolDoggie"
+    },
+    "name": "Jimmy",
+    "photoUrls": [
+        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fknowyourmeme.com%2Fmemes%2Fcool-dog&psig=AOvVaw0dlXKna76sgsRF9Bx3EpB8&ust=1668419172448000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJiHyvHvqvsCFQAAAAAdAAAAABAE"
+    ],
+    "tags": [
+        {
+            "id": 23,
+            "name": "coolDoggie"
+        }
+    ],
+    "status": "Currently available"
+}
