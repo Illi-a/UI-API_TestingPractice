@@ -1,4 +1,7 @@
 import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import Hator.*;
 
@@ -7,8 +10,8 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
 import static org.junit.Assert.assertEquals;
 
-
 public class HatorTest {
+
     @Test
     public void chooseUSDCurrencyTest(){
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);

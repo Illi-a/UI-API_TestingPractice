@@ -2,6 +2,7 @@ package Hator;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.selector.ByText;
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -84,9 +85,4 @@ public abstract class CurrencyAndLanguageDropDownMenus extends CartButtonAndCoun
     public void assertThatEURCurrencyIsChosen() {
         $(By.xpath(".//span[@class = 'dropItem']")).shouldHave(text("EUR"));
     }
-
-
-
-
-
 }
