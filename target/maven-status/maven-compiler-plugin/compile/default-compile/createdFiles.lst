@@ -2,7 +2,7 @@ Hator\CartPage.class
 Hator\CurrencyAndLanguageDropDownMenus.class
 Hator\MainPage.class
 Hator\CartButtonAndCount.class
-PetStore\RestAssuredClient.class
+PetStore\PetStoreRestAssuredClient.class
 PetStore\PetStoreOrder.class
 PetStore\PetStoreUser.class
 PetStore\PetStorePet.class

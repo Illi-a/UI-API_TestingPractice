@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="PetStoreTest" time="21.482" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="PetStoreTest" time="20.753" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -45,9 +45,9 @@
     <property name="java.io.tmpdir" value="C:\Users\psppo\AppData\Local\Temp\"/>
     <property name="idea.version" value="2021.3"/>
     <property name="java.version" value="18.0.2.1"/>
-    <property name="user.dir" value="C:\CODE\AutomatedTests"/>
+    <property name="user.dir" value="C:\CODE\qweqwe\UI-API_TestingPractice-main"/>
     <property name="os.arch" value="amd64"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\CODE\AutomatedTests"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\CODE\qweqwe\UI-API_TestingPractice-main"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1251"/>
@@ -59,14 +59,14 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="userCanLoginIntoSystem" classname="PetStoreTest" time="5.321"/>
-  <testcase name="userCanBeUpdated" classname="PetStoreTest" time="3.65"/>
-  <testcase name="petCanBeCreated" classname="PetStoreTest" time="2.227"/>
-  <testcase name="creatingPetWithEmptyBody" classname="PetStoreTest" time="0.741"/>
-  <testcase name="userCanBeCreated" classname="PetStoreTest" time="2.184"/>
-  <testcase name="newOrderCanBeCreated" classname="PetStoreTest" time="2.191"/>
-  <testcase name="petNameCanBeUpdated" classname="PetStoreTest" time="2.959"/>
-  <testcase name="findPetWithIncorrectIDTest404" classname="PetStoreTest" time="0.721"/>
-  <testcase name="findOrderWithIncorrectIDTest404" classname="PetStoreTest" time="0.728"/>
-  <testcase name="creatingNewOrderWithEmptyBody" classname="PetStoreTest" time="0.76"/>
+  <testcase name="userCanLoginIntoSystem200" classname="PetStoreTest" time="5.523"/>
+  <testcase name="userCanBeCreated200" classname="PetStoreTest" time="2.173"/>
+  <testcase name="creatingNewOrderWithEmptyBody400" classname="PetStoreTest" time="0.724"/>
+  <testcase name="petNameCanBeUpdated200" classname="PetStoreTest" time="2.913"/>
+  <testcase name="newOrderCanBeCreated200" classname="PetStoreTest" time="2.15"/>
+  <testcase name="petCanBeCreated200" classname="PetStoreTest" time="2.163"/>
+  <testcase name="creatingPetWithEmptyBody405" classname="PetStoreTest" time="0.755"/>
+  <testcase name="findPetWithIncorrectIDTest404" classname="PetStoreTest" time="0.714"/>
+  <testcase name="userCanBeUpdated200" classname="PetStoreTest" time="2.921"/>
+  <testcase name="findOrderWithIncorrectIDTest404" classname="PetStoreTest" time="0.716"/>
 </testsuite>
