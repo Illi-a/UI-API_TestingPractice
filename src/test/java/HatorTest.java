@@ -1,9 +1,10 @@
+import Hator.CartPage;
+import Hator.MainPage;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
-import io.qameta.allure.Description;
-import io.qameta.allure.Step;
-import io.qameta.allure.junit4.DisplayName;
+import org.junit.BeforeClass;
 import org.junit.Test;
-import Hator.*;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static Hator.MainPage.HOME_PAGE_LINK;
 import static com.codeborne.selenide.Selenide.open;
@@ -12,8 +13,18 @@ import static org.junit.Assert.assertEquals;
 
 public class HatorTest {
 
+    @BeforeClass
+    public static void setUp() {
+        Configuration.remote = "http://localhost:4444/wd/hub";
+        Configuration.browser = "chrome";
+        Configuration.browserSize = "1920x1080";
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("enableVNC", true);
+        Configuration.browserCapabilities = capabilities;
+    }
+
     @Test
-    public void chooseUSDCurrencyTest(){
+    public void chooseUSDCurrencyTest() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
 
         mainPage.chooseUSDCurrency();
@@ -37,7 +48,7 @@ public class HatorTest {
     }
 
     @Test
-    public void chooseENLanguage(){
+    public void chooseENLanguage() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
 
         mainPage.chooseENLanguage();
@@ -69,7 +80,7 @@ public class HatorTest {
     }
 
     @Test
-    public void userCanAddItemInCart(){
+    public void userCanAddItemInCart() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
 
         mainPage.assertThatCartIsEmpty();
@@ -78,21 +89,21 @@ public class HatorTest {
     }
 
     @Test
-    public void userCanDeleteItemFromCart(){
+    public void userCanDeleteItemFromCart() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
 
         mainPage.addToCartAvailableProduct();
         mainPage.assertThatCartContains1Item();
         mainPage.cartButtonClick();
 
-        CartPage cartPage = page (CartPage.class);
+        CartPage cartPage = page(CartPage.class);
 
         cartPage.removeItemFromCart();
         mainPage.assertThatCartIsEmpty();
     }
 
     @Test
-    public void userCanOpenHeadsetsCategoryWithENLanguage(){
+    public void userCanOpenHeadsetsCategoryWithENLanguage() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
 
         mainPage.chooseENLanguage();
@@ -104,7 +115,7 @@ public class HatorTest {
     }
 
     @Test
-    public void userCanOpenKeyboardsCategoryWithENLanguage(){
+    public void userCanOpenKeyboardsCategoryWithENLanguage() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
         mainPage.chooseENLanguage();
 
@@ -116,7 +127,7 @@ public class HatorTest {
     }
 
     @Test
-    public void userCanOpenMiceCategoryWithUALanguage(){
+    public void userCanOpenMiceCategoryWithUALanguage() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
         mainPage.chooseUALanguage();
 
@@ -128,7 +139,7 @@ public class HatorTest {
     }
 
     @Test
-    public void userCanOpenSurfaceCategoryWithUALanguage(){
+    public void userCanOpenSurfaceCategoryWithUALanguage() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
         mainPage.chooseUALanguage();
 
@@ -140,7 +151,7 @@ public class HatorTest {
     }
 
     @Test
-    public void userCanOpenAccessoriesCategoryWithDELanguage(){
+    public void userCanOpenAccessoriesCategoryWithDELanguage() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
         mainPage.chooseDELanguage();
 
@@ -152,7 +163,7 @@ public class HatorTest {
     }
 
     @Test
-    public void userCanOpenChairsCategoryWithPLLanguage(){
+    public void userCanOpenChairsCategoryWithPLLanguage() {
         MainPage mainPage = open(HOME_PAGE_LINK, MainPage.class);
         mainPage.choosePLLanguage();
 

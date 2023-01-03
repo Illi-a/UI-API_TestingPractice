@@ -3,11 +3,6 @@ import PetStore.PetStorePet;
 import PetStore.PetStoreUser;
 import org.junit.Test;
 
-import java.io.File;
-
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-
 public class PetStoreTest {
 
     PetStorePet petStorePet = new PetStorePet();
@@ -15,19 +10,19 @@ public class PetStoreTest {
     PetStoreUser petStoreUser = new PetStoreUser();
 
     @Test
-    public void petCanBeCreated() {
+    public void petCanBeCreated200() {
         petStorePet.createPet();
         petStorePet.assertThatPetIsCreated();
         petStorePet.deleteCreatedPetById();
     }
 
     @Test
-    public void creatingPetWithEmptyBody(){
+    public void creatingPetWithEmptyBody405() {
         petStorePet.createPetWithEmptyBody();
     }
 
     @Test
-    public void petNameCanBeUpdated() {
+    public void petNameCanBeUpdated200() {
         petStorePet.createPet();
         petStorePet.updateExistingPet();
         petStorePet.assertThatPetIsUpdated();
@@ -35,36 +30,36 @@ public class PetStoreTest {
     }
 
     @Test
-    public void findPetWithIncorrectIDTest404(){
+    public void findPetWithIncorrectIDTest404() {
         petStorePet.findPetWithIncorrectID();
     }
 
     @Test
-    public void newOrderCanBeCreated(){
+    public void newOrderCanBeCreated200() {
         petStoreOrder.createNewOrder();
         petStoreOrder.assertThatOrderIsCreated();
         petStoreOrder.deleteOrderById();
     }
 
     @Test
-    public void findOrderWithIncorrectIDTest404(){
+    public void findOrderWithIncorrectIDTest404() {
         petStoreOrder.findOrderByIncorrectID();
     }
 
     @Test
-    public void creatingNewOrderWithEmptyBody(){
+    public void creatingNewOrderWithEmptyBody400() {
         petStoreOrder.createNewOrderWithEmptyBody();
     }
 
     @Test
-    public void userCanBeCreated(){
+    public void userCanBeCreated200() {
         petStoreUser.createUser();
         petStoreUser.assertThatUserCreated();
         petStoreUser.deleteUser();
     }
 
     @Test
-    public void userCanBeUpdated(){
+    public void userCanBeUpdated200() {
         petStoreUser.createUser();
         petStoreUser.updateUser();
         petStoreUser.assertThatUserUpdated();
@@ -72,7 +67,7 @@ public class PetStoreTest {
     }
 
     @Test
-    public void userCanLoginIntoSystem(){
+    public void userCanLoginIntoSystem200() {
         petStoreUser.createUser();
         petStoreUser.loginUserintoTheSystem();
         petStoreUser.logoutUser();

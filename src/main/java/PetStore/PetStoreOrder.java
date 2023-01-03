@@ -1,40 +1,41 @@
 package PetStore;
 
+import io.restassured.RestAssured;
+import org.hamcrest.Matchers;
+
 import java.io.File;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-
-public class PetStoreOrder extends RestAssuredClient {
+public class PetStoreOrder extends PetStoreRestAssuredClient {
 
     private int orderID = 231233;
 
     public void createNewOrder() {
         File json = new File("src/test/resources/order.json");
-        given()
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .body(json)
                 .when()
                 .post("store/order")
                 .then()
                 .assertThat()
-                .body("id", equalTo(orderID))
+                .body("id", Matchers.equalTo(orderID))
                 .statusCode(200);
     }
 
+
     public void createNewOrderWithEmptyBody() {
-        given()
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .when()
                 .post("store/order")
                 .then()
                 .assertThat()
-                .body("message", equalTo("No data"))
+                .body("message", Matchers.equalTo("No data"))
                 .statusCode(400);
     }
 
     public void assertThatOrderIsCreated() {
-        given()
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .get("store/order/" + orderID)
                 .then()
@@ -42,8 +43,8 @@ public class PetStoreOrder extends RestAssuredClient {
                 .statusCode(200);
     }
 
-    public void deleteOrderById(){
-        given()
+    public void deleteOrderById() {
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .delete("store/order/" + orderID)
                 .then()
@@ -52,14 +53,13 @@ public class PetStoreOrder extends RestAssuredClient {
     }
 
     public void findOrderByIncorrectID() {
-        given()
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .get("store/order/" + 14317567)
                 .then()
                 .assertThat()
                 .statusCode(404);
     }
-
 
 
 }

@@ -1,53 +1,52 @@
 package PetStore;
 
+import io.restassured.RestAssured;
+import org.hamcrest.Matchers;
+
 import java.io.File;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.contains;
-import static org.hamcrest.Matchers.equalTo;
-
-public class PetStoreUser extends RestAssuredClient{
+public class PetStoreUser extends PetStoreRestAssuredClient {
 
     private String userNickname = "qqqwerty";
     private String userUPDNickname = "werty";
 
-    public void createUser(){
+    public void createUser() {
         File userJson = new File("src/test/resources/user.json");
-        given()
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .body(userJson)
                 .when()
                 .post("user/")
                 .then()
                 .assertThat()
-                .body("message", equalTo("2312333"))
+                .body("message", Matchers.equalTo("2312333"))
                 .statusCode(200);
     }
 
-    public void updateUser(){
+    public void updateUser() {
         File userUPDJson = new File("src/test/resources/userUPD.json");
-        given()
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .body(userUPDJson)
                 .when()
                 .put("user/" + userNickname)
                 .then()
                 .assertThat()
-                .body("message", equalTo("231222"))
+                .body("message", Matchers.equalTo("231222"))
                 .statusCode(200);
     }
 
-    public void assertThatUserCreated(){
-            given()
-                    .spec(getBaseSpec())
-                    .get("user/" + userNickname )
-                    .then()
-                    .assertThat()
-                    .statusCode(200);
+    public void assertThatUserCreated() {
+        RestAssured.given()
+                .spec(getBaseSpec())
+                .get("user/" + userNickname)
+                .then()
+                .assertThat()
+                .statusCode(200);
     }
 
-    public void assertThatUserUpdated(){
-        given()
+    public void assertThatUserUpdated() {
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .get("user/" + userUPDNickname)
                 .then()
@@ -55,8 +54,8 @@ public class PetStoreUser extends RestAssuredClient{
                 .statusCode(200);
     }
 
-    public void deleteUser(){
-        given()
+    public void deleteUser() {
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .delete("user/" + userNickname)
                 .then()
@@ -64,8 +63,8 @@ public class PetStoreUser extends RestAssuredClient{
                 .statusCode(200);
     }
 
-    public void deleteUPDUser(){
-        given()
+    public void deleteUPDUser() {
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .delete("user/" + userUPDNickname)
                 .then()
@@ -73,8 +72,8 @@ public class PetStoreUser extends RestAssuredClient{
                 .statusCode(200);
     }
 
-    public void loginUserintoTheSystem(){
-        given()
+    public void loginUserintoTheSystem() {
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .get("user/login?username=qqqwerty&password=qwerty")
                 .then()
@@ -82,13 +81,13 @@ public class PetStoreUser extends RestAssuredClient{
                 .statusCode(200);
     }
 
-    public void logoutUser(){
-        given()
+    public void logoutUser() {
+        RestAssured.given()
                 .spec(getBaseSpec())
                 .get("user/logout")
                 .then()
                 .assertThat()
-                .body("message", equalTo("ok"))
+                .body("message", Matchers.equalTo("ok"))
                 .statusCode(200);
     }
 

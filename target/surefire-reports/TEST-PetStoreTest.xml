@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="PetStoreTest" time="20.755" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="PetStoreTest" time="21.482" tests="10" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="17"/>
+    <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
@@ -11,11 +11,11 @@
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Europe/Kiev"/>
     <property name="maven.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.3\plugins\maven\lib\maven3/conf"/>
-    <property name="java.vm.specification.version" value="17"/>
+    <property name="java.vm.specification.version" value="18"/>
     <property name="os.name" value="Windows 10"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17.0.4\bin"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin"/>
     <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.3 clean test"/>
     <property name="jdk.debug" value="release"/>
     <property name="maven.home" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.3\plugins\maven\lib\maven3"/>
@@ -23,8 +23,8 @@
     <property name="user.home" value="C:\Users\psppo"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2022-07-19"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-17.0.4"/>
+    <property name="java.version.date" value="2022-08-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-18.0.2.1"/>
     <property name="file.separator" value="\"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="17.0.4+11-LTS-179"/>
+    <property name="java.runtime.version" value="18.0.2.1+1-1"/>
     <property name="user.name" value="psppo"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
@@ -44,29 +44,29 @@
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\psppo\AppData\Local\Temp\"/>
     <property name="idea.version" value="2021.3"/>
-    <property name="java.version" value="17.0.4"/>
-    <property name="user.dir" value="C:\CODE\Mock\TestingUIPractice"/>
+    <property name="java.version" value="18.0.2.1"/>
+    <property name="user.dir" value="C:\CODE\AutomatedTests"/>
     <property name="os.arch" value="amd64"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\CODE\Mock\TestingUIPractice"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\CODE\AutomatedTests"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1251"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-17.0.4\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\JDK 18.0.2\openjdk-18.0.2\bin;C:\Program Files\Git\cmd;C:\CODE\1 Allure\allure-2.19.0\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\CODE\1 Allure\allure-2.19.0\bin;;C:\Users\psppo\AppData\Local\spicetify;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\JDK 18.0.2\openjdk-18.0.2\bin;C:\Program Files\Git\cmd;C:\CODE\1 Allure\allure-2.19.0\bin;;C:\Program Files\Docker\Docker\resources\bin;C:\CODE\1 Allure\allure-2.19.0\bin;;C:\Users\psppo\AppData\Local\spicetify;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="17.0.4+11-LTS-179"/>
+    <property name="java.vm.version" value="18.0.2.1+1-1"/>
     <property name="classworlds.conf" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.3\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="61.0"/>
+    <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="userCanLoginIntoSystem" classname="PetStoreTest" time="5.538"/>
-  <testcase name="userCanBeUpdated" classname="PetStoreTest" time="2.924"/>
-  <testcase name="petCanBeCreated" classname="PetStoreTest" time="2.184"/>
-  <testcase name="creatingPetWithEmptyBody" classname="PetStoreTest" time="0.718"/>
-  <testcase name="userCanBeCreated" classname="PetStoreTest" time="2.162"/>
-  <testcase name="newOrderCanBeCreated" classname="PetStoreTest" time="2.165"/>
-  <testcase name="petNameCanBeUpdated" classname="PetStoreTest" time="2.914"/>
-  <testcase name="findPetWithIncorrectIDTest404" classname="PetStoreTest" time="0.707"/>
-  <testcase name="findOrderWithIncorrectIDTest404" classname="PetStoreTest" time="0.719"/>
-  <testcase name="creatingNewOrderWithEmptyBody" classname="PetStoreTest" time="0.723"/>
+  <testcase name="userCanLoginIntoSystem" classname="PetStoreTest" time="5.321"/>
+  <testcase name="userCanBeUpdated" classname="PetStoreTest" time="3.65"/>
+  <testcase name="petCanBeCreated" classname="PetStoreTest" time="2.227"/>
+  <testcase name="creatingPetWithEmptyBody" classname="PetStoreTest" time="0.741"/>
+  <testcase name="userCanBeCreated" classname="PetStoreTest" time="2.184"/>
+  <testcase name="newOrderCanBeCreated" classname="PetStoreTest" time="2.191"/>
+  <testcase name="petNameCanBeUpdated" classname="PetStoreTest" time="2.959"/>
+  <testcase name="findPetWithIncorrectIDTest404" classname="PetStoreTest" time="0.721"/>
+  <testcase name="findOrderWithIncorrectIDTest404" classname="PetStoreTest" time="0.728"/>
+  <testcase name="creatingNewOrderWithEmptyBody" classname="PetStoreTest" time="0.76"/>
 </testsuite>
